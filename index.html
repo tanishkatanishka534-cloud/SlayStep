@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="SlayStep — Luxury designer heels for every occasion. Shop stilettos, pumps, mules & platforms.">
+    <title>SlayStep — Walk in Confidence</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="logo">SLAYSTEP</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button title="Search">🔍</button>
+                <button title="Wishlist">♡</button>
+                <button id="cartBtn" title="Cart">🛒<span class="cart-count" id="cartCount"
+                        style="display:none">0</span></button>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">✦ New Collection 2026</span>
+                <h1>Walk With<br><span>Confidence</span></h1>
+                <p>Discover handcrafted luxury heels designed to make every step a statement. Elevate your style with
+                    SlayStep's exclusive collection.</p>
+                <div class="btn-group">
+                    <a href="#products" class="btn btn-primary">Shop Now →</a>
+                    <a href="#categories" class="btn btn-outline">Explore</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>2K+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat">
+                        <h3>150+</h3>
+                        <p>Heel Designs</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4.9★</h3>
+                        <p>Average Rating</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=750&fit=crop"
+                    alt="Luxury red heels">
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CATEGORIES ═══ -->
+    <section id="categories">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="label">Browse By Style</span>
+                <h2>Shop Categories</h2>
+                <p>Find the perfect pair for every occasion and mood</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card reveal">
+                    <img src="https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=500&h=600&fit=crop"
+                        alt="Stilettos">
+                    <div class="category-overlay">
+                        <h3>Stilettos</h3>
+                        <p>42 Styles</p>
+                    </div>
+                </div>
+                <div class="category-card reveal">
+                    <img src="https://images.unsplash.com/photo-1596703263926-eb0762ee17e4?w=500&h=600&fit=crop"
+                        alt="Pumps">
+                    <div class="category-overlay">
+                        <h3>Pumps</h3>
+                        <p>38 Styles</p>
+                    </div>
+                </div>
+                <div class="category-card reveal">
+                    <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=500&h=600&fit=crop"
+                        alt="Mules">
+                    <div class="category-overlay">
+                        <h3>Mules</h3>
+                        <p>25 Styles</p>
+                    </div>
+                </div>
+                <div class="category-card reveal">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&h=600&fit=crop"
+                        alt="Platforms">
+                    <div class="category-overlay">
+                        <h3>Platforms</h3>
+                        <p>31 Styles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PRODUCTS ═══ -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="label">Curated For You</span>
+                <h2>Trending Now</h2>
+                <p>Our most loved designs, handpicked by our stylists</p>
+            </div>
+            <div class="filter-tabs reveal">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="stilettos">Stilettos</button>
+                <button class="filter-tab" data-filter="pumps">Pumps</button>
+                <button class="filter-tab" data-filter="mules">Mules</button>
+                <button class="filter-tab" data-filter="platforms">Platforms</button>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ═══ FEATURED BANNER ═══ -->
+    <section id="featured">
+        <div class="container">
+            <div class="featured-banner reveal">
+                <div class="banner-inner">
+                    <div class="banner-text">
+                        <span class="label">Limited Edition</span>
+                        <h2>The Crystal Collection</h2>
+                        <p>Hand-embellished Swarovski crystals on Italian leather. Only 200 pairs available worldwide.
+                            Don't miss your chance to own a piece of art.</p>
+                        <a href="#products" class="btn btn-primary">Shop Collection →</a>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=700&h=500&fit=crop"
+                            alt="Crystal Collection">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="label">What They Say</span>
+                <h2>Client Love</h2>
+            </div>
+            <div class="testimonial-slider reveal">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="quote">"SlayStep heels are the most comfortable luxury heels I've ever worn. I
+                            danced all night at my gala and my feet felt amazing. Absolute perfection!"</div>
+                        <div class="author-name">Sophia Carter</div>
+                        <div class="author-title">Fashion Influencer</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote">"The craftsmanship is unreal. Every detail, from the stitching to the sole,
+                            screams luxury. My Golden Hour Pumps get compliments everywhere I go."</div>
+                        <div class="author-name">Aria Mitchell</div>
+                        <div class="author-title">Stylist &amp; Designer</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote">"I've tried every luxury heel brand and nothing compares to SlayStep's
+                            quality-to-price ratio. These are investment pieces you'll treasure for years."</div>
+                        <div class="author-name">Elena Rodriguez</div>
+                        <div class="author-title">Beauty Editor</div>
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <button class="active"></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ NEWSLETTER ═══ -->
+    <section class="newsletter">
+        <div class="container reveal">
+            <h2>Join the SlayStep Club</h2>
+            <p>Get early access to new drops, exclusive offers, and style inspiration.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">SLAYSTEP</a>
+                    <p>Luxury heels handcrafted with passion. Designed for women who walk with confidence and style.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Stilettos</a></li>
+                        <li><a href="#">Pumps</a></li>
+                        <li><a href="#">Platforms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SlayStep. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="Pinterest">📌</a>
+                    <a href="#" title="TikTok">🎵</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══ CART SIDEBAR ═══ -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Bag</h3>
+            <button class="cart-close" id="cartClose">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <div class="empty-icon">👠</div>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Total</span><span id="cartTotal">$0</span></div>
+            <button class="btn btn-primary" style="width:100%;justify-content:center">Checkout →</button>
+        </div>
+    </div>
+
+    <!-- ═══ BACK TO TOP ═══ -->
+    <button class="back-to-top" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
